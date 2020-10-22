@@ -13,3 +13,12 @@ function randomSquare() {
   // assign the id of the randomSquare to hitPosition for us to use later
   hitPosition = $randomSquare.id;
 }
+
+squareList.forEach($square => {
+  $square.addEventListener('mouseup', () => {
+    if ($square.id === hitPosition) {
+      result = result + 1;
+      $score.textContent = result;
+    }
+  });
+});
